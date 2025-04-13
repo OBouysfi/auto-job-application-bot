@@ -2,28 +2,22 @@ from selenium import webdriver
 import time
 from selenium.webdriver.support.ui import Select
 
-#7el maroc annonce f google chrome
 browser = webdriver.Chrome('chromedriver.exe')
 browser.get("https://www.marocannonces.com/index.php?a=4")
 
-#dkhal smiya o lpassword dyalk
 blassa_dyal_Username = browser.find_element_by_id('username')
 blassa_dyal_Username.send_keys("bouysfi.othman@gmail.com")
 blassa_dyal_password = browser.find_element_by_id('password')
 blassa_dyal_password.send_keys("123456789")
 
-#cliki 3la valider
 browser.find_element_by_xpath("//input[@type='submit' and @value='Valider']").click()
-#tsena chwiya 15 seconde
 tsena_chwiya = time.sleep(15)
 
 
-# man hna aybda i9leb 7et lien dyalk domain dkhedma dyalk
 lien1 = "https://www.marocannonces.com/maroc/offres-emploi-domaine-informatique-multimedia-internet-casablanca-b309-t563.html?f_3=Informatique+%2F+Multim%C3%A9dia+%2F+Internet"
 
 
 
-#fonction dyal dfi3
 def postule ( ):
     postuler1 = browser.find_element_by_class_name("btn-reply")
     time.sleep(4)
